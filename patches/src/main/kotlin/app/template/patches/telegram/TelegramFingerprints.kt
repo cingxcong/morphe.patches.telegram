@@ -741,12 +741,19 @@ val AdsInstanceLoadNativeAdFingerprint = Fingerprint(
     ),
 )
 
-// MessagesController.sendTyping(JJII)Z — Plus-specific signature
-val PlusSendTypingFingerprint = Fingerprint(
+// MessagesController.sendTyping(...) — controller-level typing dispatch.
+val MessagesControllerSendTypingFingerprint = Fingerprint(
     definingClass = "Lorg/telegram/messenger/MessagesController;",
     name = "sendTyping",
     returnType = "Z",
     parameters = listOf("J", "J", "I", "I"),
+)
+
+val MessagesControllerSendTypingWithStringFingerprint = Fingerprint(
+    definingClass = "Lorg/telegram/messenger/MessagesController;",
+    name = "sendTyping",
+    returnType = "Z",
+    parameters = listOf("J", "J", "I", "Ljava/lang/String;", "I"),
 )
 
 // org.telegram.plus.helpers.AnalyticsHelper fingerprints
