@@ -5,7 +5,6 @@ import app.morphe.patcher.patch.bytecodePatch
 import app.template.patches.shared.Constants.TELEGRAM_COMPATIBILITY
 import app.template.patches.shared.Constants.TELEGRAM_PLUS_COMPATIBILITY
 import app.template.patches.shared.Constants.TELEGRAM_WEB_COMPATIBILITY
-import app.template.patches.telegram.signature.telegramSpoofDependency
 import app.template.patches.telegram.MessagesControllerIsPremiumUserFingerprint
 import app.template.patches.telegram.PremiumFeaturesBlockedFingerprint
 import app.template.patches.telegram.SharedConfigGetDevicePerformanceClassFingerprint
@@ -20,7 +19,6 @@ val telegramPremiumPatch = bytecodePatch(
     description = "Unlocks Telegram Premium features for the current account.",
 ) {
     compatibleWith(TELEGRAM_COMPATIBILITY, TELEGRAM_WEB_COMPATIBILITY, TELEGRAM_PLUS_COMPATIBILITY)
-    dependsOn(telegramSpoofDependency())
 
     execute {
         // isPremium() for current user → true
