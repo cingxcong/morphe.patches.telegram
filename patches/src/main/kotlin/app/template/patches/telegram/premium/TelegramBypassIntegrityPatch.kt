@@ -9,7 +9,6 @@ import app.template.patches.shared.Constants.TELEGRAM_PLUS_COMPATIBILITY
 import app.template.patches.shared.Constants.TELEGRAM_WEB_COMPATIBILITY
 import app.template.patches.telegram.AndroidUtilitiesGetCertFingerprintFingerprint
 import app.template.patches.telegram.SafetyNetCheckFingerprint
-import app.template.patches.telegram.signature.telegramSpoofDependency
 import com.android.tools.smali.dexlib2.iface.instruction.OneRegisterInstruction
 
 // SHA-256 of the original signing certificate (X.509 DER) for each package variant.
