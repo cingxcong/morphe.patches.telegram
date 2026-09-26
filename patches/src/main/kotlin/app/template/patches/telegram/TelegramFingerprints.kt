@@ -505,6 +505,22 @@ val MediaDataControllerLoadPinnedMessagesFingerprint = Fingerprint(
     parameters = listOf("J", "I", "I"),
 )
 
+// ─── Translation gates ────────────────────────────────────────────────────────
+
+val MessagesControllerIsTranslationsAutoEnabledFingerprint = Fingerprint(
+    definingClass = "Lorg/telegram/messenger/MessagesController;",
+    name = "isTranslationsAutoEnabled",
+    returnType = "Z",
+    parameters = listOf(),
+)
+
+val MessagesControllerIsTranslationsManualEnabledFingerprint = Fingerprint(
+    definingClass = "Lorg/telegram/messenger/MessagesController;",
+    name = "isTranslationsManualEnabled",
+    returnType = "Z",
+    parameters = listOf(),
+)
+
 // ─── Story quality ────────────────────────────────────────────────────────────
 
 // Telegram 12.10.5: the public gate used by TLRPC$MessageMedia.getDocument().
