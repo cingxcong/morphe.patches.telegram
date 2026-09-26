@@ -505,6 +505,18 @@ val MediaDataControllerLoadPinnedMessagesFingerprint = Fingerprint(
     parameters = listOf("J", "I", "I"),
 )
 
+// ─── Story quality ────────────────────────────────────────────────────────────
+
+// Telegram 12.10.5: the public gate used by TLRPC$MessageMedia.getDocument().
+// When true and alt_documents is present, Telegram selects the first alternate
+// document (the higher-quality story variant) instead of the default document.
+val MessagesControllerIsStoryQualityFullFingerprint = Fingerprint(
+    definingClass = "Lorg/telegram/messenger/MessagesController;",
+    name = "isStoryQualityFull",
+    returnType = "Z",
+    parameters = listOf(),
+)
+
 // ─── VoiceToMusic ─────────────────────────────────────────────────────────────
 
 val MessageObjectIsVoiceFingerprint = Fingerprint(
