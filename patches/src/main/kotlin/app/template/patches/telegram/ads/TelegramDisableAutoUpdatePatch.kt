@@ -5,7 +5,6 @@ import app.morphe.patcher.patch.bytecodePatch
 import app.template.patches.shared.Constants.TELEGRAM_COMPATIBILITY
 import app.template.patches.shared.Constants.TELEGRAM_PLUS_COMPATIBILITY
 import app.template.patches.shared.Constants.TELEGRAM_WEB_COMPATIBILITY
-import app.template.patches.telegram.signature.telegramSpoofDependency
 import app.template.patches.telegram.BlockingUpdateViewShowFingerprint
 import app.template.patches.telegram.CheckAppUpdateFingerprint
 import app.template.patches.telegram.MessagesControllerCheckPromoInfoInternalFingerprint
@@ -22,7 +21,6 @@ val telegramDisableAutoUpdatePatch = bytecodePatch(
         "Plus-specific updater and update settings flag.",
 ) {
     compatibleWith(TELEGRAM_COMPATIBILITY, TELEGRAM_WEB_COMPATIBILITY, TELEGRAM_PLUS_COMPATIBILITY)
-    dependsOn(telegramSpoofDependency())
 
     execute {
         // Suppress update checks at the LaunchActivity level
