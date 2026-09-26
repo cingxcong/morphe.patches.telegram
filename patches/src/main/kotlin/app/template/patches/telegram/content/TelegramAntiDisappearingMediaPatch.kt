@@ -7,7 +7,6 @@ import app.morphe.patcher.extensions.InstructionExtensions.replaceInstruction
 import app.morphe.patcher.fieldAccess
 import app.morphe.patcher.patch.bytecodePatch
 import app.template.patches.shared.Constants.TELEGRAM_COMPATIBILITY
-import app.template.patches.telegram.signature.telegramSpoofDependency
 import app.template.patches.shared.Constants.TELEGRAM_PLUS_COMPATIBILITY
 import app.template.patches.shared.Constants.TELEGRAM_WEB_COMPATIBILITY
 import app.template.patches.telegram.IsRoundOnceFingerprint
@@ -27,7 +26,6 @@ val telegramAntiDisappearingMediaPatch = bytecodePatch(
     description = "Keeps view-once photos, videos and voice messages viewable indefinitely.",
 ) {
     compatibleWith(TELEGRAM_COMPATIBILITY, TELEGRAM_WEB_COMPATIBILITY, TELEGRAM_PLUS_COMPATIBILITY)
-    dependsOn(telegramSpoofDependency())
 
     execute {
         // Return false — prevents the destruction timer and encrypted-only storage
