@@ -456,6 +456,20 @@ val MessagesControllerStoryEntitiesAllowedUserFingerprint = Fingerprint(
     parameters = listOf("Lorg/telegram/tgnet/TLRPC\$User;"),
 )
 
+val MessagesControllerStoriesEnabledFingerprint = Fingerprint(
+    definingClass = "Lorg/telegram/messenger/MessagesController;",
+    name = "storiesEnabled",
+    returnType = "Z",
+    parameters = listOf(),
+)
+
+val MessagesControllerStoryEntitiesAllowedFingerprint = Fingerprint(
+    definingClass = "Lorg/telegram/messenger/MessagesController;",
+    name = "storyEntitiesAllowed",
+    returnType = "Z",
+    parameters = listOf(),
+)
+
 val StoriesControllerHasStoriesFingerprint = Fingerprint(
     definingClass = "Lorg/telegram/ui/Stories/StoriesController;",
     name = "hasStories",
