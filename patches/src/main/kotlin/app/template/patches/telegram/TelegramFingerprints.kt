@@ -85,9 +85,9 @@ val VideoAdsLoadFingerprint = Fingerprint(
 
 val CheckAppUpdateFingerprint = Fingerprint(
     definingClass = "Lorg/telegram/ui/LaunchActivity;",
-    name = "checkAppUpdate",
+    name = "y",
     returnType = "V",
-    parameters = listOf("Z", "Lee/f;"),
+    parameters = listOf("Z"),
 )
 
 val BlockingUpdateViewShowFingerprint = Fingerprint(
