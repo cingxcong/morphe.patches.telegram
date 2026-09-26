@@ -87,7 +87,7 @@ val CheckAppUpdateFingerprint = Fingerprint(
     definingClass = "Lorg/telegram/ui/LaunchActivity;",
     name = "checkAppUpdate",
     returnType = "V",
-    parameters = listOf("Z", "Lorg/telegram/messenger/browser/Browser\$Progress;"),
+    parameters = listOf("Z", "Lee/f;"),
 )
 
 val BlockingUpdateViewShowFingerprint = Fingerprint(
@@ -205,7 +205,7 @@ val CheckSensitiveFingerprint = Fingerprint(
     name = "checkSensitive",
     returnType = "V",
     parameters = listOf(
-        "Lorg/telegram/ui/ActionBar/BaseFragment;",
+        "Lorg/telegram/ui/ActionBar/r2;",
         "J",
         "Ljava/lang/Runnable;",
         "Ljava/lang/Runnable;",
@@ -292,7 +292,7 @@ val CheckCanOpenChat2Fingerprint = Fingerprint(
     definingClass = "Lorg/telegram/messenger/MessagesController;",
     name = "checkCanOpenChat",
     returnType = "Z",
-    parameters = listOf("Landroid/os/Bundle;", "Lorg/telegram/ui/ActionBar/BaseFragment;"),
+    parameters = listOf("Landroid/os/Bundle;", "Lorg/telegram/ui/ActionBar/r2;"),
 )
 
 val CheckCanOpenChat3Fingerprint = Fingerprint(
@@ -301,7 +301,7 @@ val CheckCanOpenChat3Fingerprint = Fingerprint(
     returnType = "Z",
     parameters = listOf(
         "Landroid/os/Bundle;",
-        "Lorg/telegram/ui/ActionBar/BaseFragment;",
+        "Lorg/telegram/ui/ActionBar/r2;",
         "Lorg/telegram/messenger/MessageObject;",
     ),
 )
@@ -312,9 +312,9 @@ val CheckCanOpenChat4Fingerprint = Fingerprint(
     returnType = "Z",
     parameters = listOf(
         "Landroid/os/Bundle;",
-        "Lorg/telegram/ui/ActionBar/BaseFragment;",
+        "Lorg/telegram/ui/ActionBar/r2;",
         "Lorg/telegram/messenger/MessageObject;",
-        "Lorg/telegram/messenger/browser/Browser\$Progress;",
+        "Lee/f;",
     ),
 )
 
@@ -346,7 +346,7 @@ val NotificationsControllerRemoveDeletedMessagesFingerprint = Fingerprint(
     definingClass = "Lorg/telegram/messenger/NotificationsController;",
     name = "removeDeletedMessagesFromNotifications",
     returnType = "V",
-    parameters = listOf("Landroidx/collection/LongSparseArray;", "Z"),
+    parameters = listOf("Lz/f;", "Z"),
 )
 
 // ─── Anti-disappearing media ──────────────────────────────────────────────────
