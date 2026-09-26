@@ -47,7 +47,7 @@ val telegramBypassIntegrityPatch = bytecodePatch(
     description = "Spoofs certificate fingerprint and SafetyNet results so login works on patched APK.",
 ) {
     compatibleWith(TELEGRAM_COMPATIBILITY, TELEGRAM_WEB_COMPATIBILITY, TELEGRAM_PLUS_COMPATIBILITY)
-    dependsOn(telegramSpoofDependency(), readPackageNamePatch)
+    dependsOn(readPackageNamePatch)
 
     execute {
         val certHash = CERT_HASHES[detectedPackageName]
