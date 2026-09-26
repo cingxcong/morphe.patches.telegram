@@ -6,7 +6,6 @@ import app.morphe.patcher.patch.bytecodePatch
 import app.template.patches.shared.Constants.TELEGRAM_COMPATIBILITY
 import app.template.patches.shared.Constants.TELEGRAM_PLUS_COMPATIBILITY
 import app.template.patches.shared.Constants.TELEGRAM_WEB_COMPATIBILITY
-import app.template.patches.telegram.signature.telegramSpoofDependency
 import app.template.patches.telegram.PlusSendTypingFingerprint
 
 @Suppress("unused")
@@ -16,7 +15,6 @@ val telegramHideTypingPatch = bytecodePatch(
         "On Telegram Plus also silences the controller-level sendTyping dispatcher.",
 ) {
     compatibleWith(TELEGRAM_COMPATIBILITY, TELEGRAM_WEB_COMPATIBILITY, TELEGRAM_PLUS_COMPATIBILITY)
-    dependsOn(telegramSpoofDependency())
 
     execute {
         // needSendTyping()V — UI layer: called by ChatActivityEnterView when the user types.
