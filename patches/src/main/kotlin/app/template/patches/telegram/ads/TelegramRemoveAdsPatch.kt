@@ -5,7 +5,6 @@ import app.morphe.patcher.patch.bytecodePatch
 import app.template.patches.shared.Constants.TELEGRAM_COMPATIBILITY
 import app.template.patches.shared.Constants.TELEGRAM_PLUS_COMPATIBILITY
 import app.template.patches.shared.Constants.TELEGRAM_WEB_COMPATIBILITY
-import app.template.patches.telegram.signature.telegramSpoofDependency
 import app.template.patches.telegram.AdsControllerAdsDisabledFingerprint
 import app.template.patches.telegram.AdsInstanceLoadAdsFingerprint
 import app.template.patches.telegram.AdsInstanceLoadNativeAdFingerprint
@@ -21,7 +20,6 @@ val telegramRemoveAdsPatch = bytecodePatch(
         "On Telegram Plus also blocks native banner and inline ads.",
 ) {
     compatibleWith(TELEGRAM_COMPATIBILITY, TELEGRAM_WEB_COMPATIBILITY, TELEGRAM_PLUS_COMPATIBILITY)
-    dependsOn(telegramSpoofDependency())
 
     execute {
         // 12.10.5 moved the ChatActivity sponsored-slot methods into obfuscated ui.ko.
