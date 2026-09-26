@@ -191,6 +191,7 @@ val ShowCantOpenAlertFingerprint = Fingerprint(
     definingClass = "Lorg/telegram/messenger/MessagesController;",
     name = "showCantOpenAlert",
     returnType = "V",
+    parameters = listOf("Lorg/telegram/ui/ActionBar/r2;", "Ljava/lang/String;"),
 )
 
 val CheckChannelErrorFingerprint = Fingerprint(
@@ -411,7 +412,7 @@ val SendSecretMessageReadFingerprint = Fingerprint(
 
 val SecretMediaViewerClosePhotoFingerprint = Fingerprint(
     definingClass = "Lorg/telegram/ui/SecretMediaViewer;",
-    name = "closePhoto",
+    name = "e",
     returnType = "Z",
     accessFlags = listOf(AccessFlags.PUBLIC),
     parameters = listOf("Z", "Z"),
@@ -491,7 +492,7 @@ val ProfileActivityIsSwipeBackEnabledFingerprint = Fingerprint(
 )
 
 val ChatActivityIsSwipeBackEnabledFingerprint = Fingerprint(
-    definingClass = "Lorg/telegram/ui/ChatActivity;",
+    definingClass = "Lorg/telegram/ui/ko;",
     name = "isSwipeBackEnabled",
     returnType = "Z",
     parameters = listOf("Landroid/view/MotionEvent;"),
@@ -586,21 +587,22 @@ val MessagesControllerIsUserNoForwardsUserFullFingerprint = Fingerprint(
 // Plus: getNextUnreadDialog(JIIZ[I)Dialog (5 params — different signature)
 // Omit parameters for cross-variant compat; method name + returnType + PUBLIC STATIC is unique
 val ChatPullingDownDrawableGetNextFingerprint = Fingerprint(
-    definingClass = "Lorg/telegram/ui/ChatPullingDownDrawable;",
-    name = "getNextUnreadDialog",
+    definingClass = "Lorg/telegram/ui/hq;",
+    name = "c",
     returnType = "Lorg/telegram/tgnet/TLRPC\$Dialog;",
     accessFlags = listOf(AccessFlags.PUBLIC, AccessFlags.STATIC),
+    parameters = listOf("J", "I", "I", "Z", "[I"),
 )
 
 val ChatPullingDownDrawableDrawBottomPanelFingerprint = Fingerprint(
-    definingClass = "Lorg/telegram/ui/ChatPullingDownDrawable;",
-    name = "drawBottomPanel",
+    definingClass = "Lorg/telegram/ui/hq;",
+    name = "b",
     returnType = "V",
 )
 
 val ChatPullingDownDrawableNeedDrawBottomPanelFingerprint = Fingerprint(
-    definingClass = "Lorg/telegram/ui/ChatPullingDownDrawable;",
-    name = "needDrawBottomPanel",
+    definingClass = "Lorg/telegram/ui/hq;",
+    name = "e",
     returnType = "Z",
 )
 
@@ -664,8 +666,8 @@ val MessageObjectUpdateMessageTextFingerprint = Fingerprint(
 // DialogCell.buildLayout()V — calls getRestrictionReason twice; we use matchAll on the
 // getRestrictionReason methodCall filter to find and neutralise both result registers.
 val DialogCellBuildLayoutFingerprint = Fingerprint(
-    definingClass = "Lorg/telegram/ui/Cells/DialogCell;",
-    name = "buildLayout",
+    definingClass = "Lorg/telegram/ui/Cells/u2;",
+    name = "t",
     returnType = "V",
     filters = listOf(
         methodCall(
@@ -677,8 +679,8 @@ val DialogCellBuildLayoutFingerprint = Fingerprint(
 
 // DialogCell.updateMessageThumbs()V — also calls getRestrictionReason
 val DialogCellUpdateMessageThumbsFingerprint = Fingerprint(
-    definingClass = "Lorg/telegram/ui/Cells/DialogCell;",
-    name = "updateMessageThumbs",
+    definingClass = "Lorg/telegram/ui/Cells/u2;",
+    name = "c0",
     returnType = "V",
     filters = listOf(
         methodCall(
@@ -771,16 +773,16 @@ val AnalyticsTrackEventMapFingerprint = Fingerprint(
 
 // ─── Rich HTML paste ──────────────────────────────────────────────────────────
 val ChatActivityEnterViewHandleRichHtmlPasteFingerprint = Fingerprint(
-    definingClass = "Lorg/telegram/ui/Components/ChatActivityEnterView;",
-    name = "handleRichHtmlPaste",
+    definingClass = "Lorg/telegram/ui/Components/eu;",
+    name = "onTextContextMenuItem",
     returnType = "Z",
-    parameters = listOf(),
+    parameters = listOf("I"),
 )
 
 // ─── Rich-message forwarding / Hide Sender Name ───────────────────────────────
 val ChatActivityForwardMessagesFingerprint = Fingerprint(
-    definingClass = "Lorg/telegram/ui/ChatActivity;",
-    name = "forwardMessages",
+    definingClass = "Lorg/telegram/ui/ko;",
+    name = "s8",
     returnType = "V",
     parameters = listOf(
         "Ljava/util/ArrayList;",
