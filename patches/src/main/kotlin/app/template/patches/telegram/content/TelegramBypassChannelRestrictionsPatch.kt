@@ -27,7 +27,6 @@ import app.template.patches.telegram.MessagesControllerIsSensitiveFingerprint
 import app.template.patches.telegram.SetContentSettingsFingerprint
 import app.template.patches.telegram.ShowCantOpenAlertFingerprint
 import app.template.patches.telegram.ShowSensitiveContentFingerprint
-import app.template.patches.telegram.signature.telegramSpoofDependency
 import com.android.tools.smali.dexlib2.Opcode
 import com.android.tools.smali.dexlib2.iface.instruction.OneRegisterInstruction
 import com.android.tools.smali.dexlib2.iface.instruction.TwoRegisterInstruction
@@ -39,7 +38,6 @@ val telegramBypassChannelRestrictionsPatch = bytecodePatch(
         "sensitive, and copyright-restricted channels.",
 ) {
     compatibleWith(TELEGRAM_COMPATIBILITY, TELEGRAM_WEB_COMPATIBILITY, TELEGRAM_PLUS_COMPATIBILITY)
-    dependsOn(telegramSpoofDependency())
 
     execute {
 
