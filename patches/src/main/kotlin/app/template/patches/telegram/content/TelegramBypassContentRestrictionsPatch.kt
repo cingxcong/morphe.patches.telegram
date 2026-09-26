@@ -9,7 +9,6 @@ import app.morphe.patcher.patch.bytecodePatch
 import app.template.patches.shared.Constants.TELEGRAM_COMPATIBILITY
 import app.template.patches.shared.Constants.TELEGRAM_PLUS_COMPATIBILITY
 import app.template.patches.shared.Constants.TELEGRAM_WEB_COMPATIBILITY
-import app.template.patches.telegram.CanForwardMessageFingerprint
 import app.template.patches.telegram.MessagesControllerIsChatNoForwardsChatFingerprint
 import app.template.patches.telegram.MessagesControllerIsChatNoForwardsLongFingerprint
 import app.template.patches.telegram.MessagesControllerIsPeerNoForwardsFingerprint
@@ -58,11 +57,6 @@ val telegramBypassContentRestrictionsPatch = bytecodePatch(
             """)
         }
 
-        // canForwardMessage → always true
-        CanForwardMessageFingerprint.method.addInstructions(0, """
-            const/4 v0, 0x1
-            return v0
-        """)
 
         // UI helper methods were folded into the obfuscated ChatActivity in 12.10.5.
         // Controller-level isPeerNoForwards + canForwardMessage + field reads cover the behavior.
